@@ -3,7 +3,7 @@ const     app = express()
 
 app.set("port", process.env.PORT || 3000)
 
-app.use("public", express.static("public") )
+app.use("/public", express.static("public") )
 
 app.get("/", (req, res)=> res.sendFile(__dirname + "/public/index.html") )
 
